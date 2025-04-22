@@ -1,36 +1,32 @@
-/* frontend/src/App.css */
-
-/* Global Styles */
+/* Global */
 body, html, #root {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Arial, sans-serif;
-  background-color: #fdfdfd;
-  color: #000;
-}
-h1, h2, h3 {
-  margin: 0.5em 0;
-}
-button {
-  cursor: pointer;
+  font-family: 'Lato', Arial, sans-serif; /* Northeastern’s primary digital font */ 
+  color: #000000;                         /* Black as primary text color */ 
+  background-color: #FFFFFF;              /* Default white background */
 }
 
-/* Home Screen Styles */
+/* HomeScreen */
 .home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  background-color: #000000; /* Black background */ 
+  color: #FFFFFF;            /* White text */ 
   text-align: center;
-  height: 100vh; /* full screen vertical */
-  padding: 2rem;
-  background-color: #4a90e2; /* a calming blue background, for example */
-  color: #fff;
+  padding: 1rem;
 }
 .home-container h1 {
   font-size: 3em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+}
+.home-container img {
+  max-width: 80%;
+  margin-bottom: 1rem;
 }
 .buttons {
   display: flex;
@@ -41,96 +37,104 @@ button {
   padding: 0.5em 1em;
   border: none;
   border-radius: 8px;
-  background-color: #ffffff;
-  color: #4a90e2;
-  min-width: 180px;
+  background-color: #C8102E; /* Northeastern red */ 
+  color: #FFFFFF;            /* White text */ 
+  min-width: 160px;
+  transition: background-color 0.2s ease;
 }
-.main-button:disabled {
-  opacity: 0.6;
-}
-.main-button:hover:not(:disabled) {
-  background-color: #e0e0e0;
+.main-button:hover {
+  background-color: #A10E24; /* Darker red on hover */ 
 }
 
-/* Directory Screen Styles */
+/* DirectoryScreen */
 .directory-container {
-  max-height: 100vh;
   padding: 1rem;
-  overflow-y: auto; /* enable scroll if content is tall */
-  background-color: #f0f0f0;
-}
-.directory-container h2 {
-  text-align: center;
+  max-height: 100vh;
+  overflow-y: auto;
+  background-color: #F0F0F0;
 }
 .back-button {
   margin-bottom: 1rem;
-  font-size: 1em;
-  padding: 0.25em 0.5em;
+  font-family: 'Lato', Arial, sans-serif;
+  background-color: #C8102E;
+  color: #FFFFFF;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
 }
 .directory-section {
   margin-bottom: 2rem;
 }
-.directory-section h3 {
-  margin-bottom: 0.5em;
-}
 .directory-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 1em;
+  margin-top: 0.5rem;
 }
-.directory-table th, .directory-table td {
-  border: 1px solid #ccc;
-  padding: 0.5em;
+.directory-table th,
+.directory-table td {
+  border: 1px solid #CCC;
+  padding: 0.5rem;
   text-align: left;
 }
 .directory-table th {
-  background-color: #e0e0e0;
+  background-color: #C8102E; /* Red header */ 
+  color: #FFFFFF;
 }
 
-/* Admin Panel Styles */
+/* AdminPanel */
 .admin-container {
-  padding: 1rem 2rem;
   max-width: 600px;
   margin: 2rem auto;
+  padding: 1rem;
+  background-color: #FFFFFF;
 }
 .admin-container h2 {
+  text-align: center;
   margin-bottom: 1rem;
-}
-.error {
-  color: red;
-}
-.logout-button {
-  float: right;
-  background-color: #ddd;
-  padding: 0.25em 0.5em;
+  font-family: 'Lato', Arial, sans-serif;
+  color: #C8102E; /* Red headings */ 
 }
 .admin-section {
-  margin: 1.5rem 0;
+  margin-bottom: 2rem;
 }
-.admin-section textarea, .admin-section input {
-  width: 100%;
-  font-size: 1em;
-  padding: 0.5em;
-  margin-top: 0.5em;
+.admin-section h3 {
+  margin-bottom: 0.5rem;
+  color: #000000;
 }
-.new-entry-form {
-  display: flex;
-  flex-wrap: wrap;
+.admin-section form {
+  display: grid;
   gap: 0.5rem;
-  margin: 0.5em 0;
 }
-.new-entry-form input {
-  flex: 1 1 45%;
-}
-.save-button, .admin-section button {
-  background-color: #4a90e2;
-  color: #fff;
-  padding: 0.5em 1em;
-  border: none;
+.admin-section input[type="text"],
+.admin-section select,
+.admin-section textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #CCC;
   border-radius: 4px;
-  font-size: 1em;
+  font-family: 'Lato', Arial, sans-serif;
 }
+.admin-section button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #C8102E; /* Red buttons */ 
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+.admin-section button:hover {
+  background-color: #A10E24; /* Hover state */ 
+}
+
+/* Status Messages */
 .status-msg {
-  font-weight: bold;
   margin-top: 1rem;
+  font-weight: bold;
+  color: #C8102E; /* Use red for emphasis */ 
+}
+.error {
+  color: #C8102E;
 }
