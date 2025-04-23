@@ -46,6 +46,13 @@ body, html, #root {
   background-color: #A10E24; /* Darker red on hover */ 
 }
 
+img {
+  max-width: 500px;
+  max-height: 500px;
+  height: auto;
+  width: auto;
+}
+
 /* DirectoryScreen */
 .directory-container {
   padding: 1rem;
