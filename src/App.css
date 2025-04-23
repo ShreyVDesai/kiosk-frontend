@@ -47,10 +47,12 @@ body, html, #root {
 }
 
 img {
-  max-width: 500px;
-  max-height: 500px;
-  height: auto;
+  max-width: 31.25rem;
+  max-height: 31.25rem;
   width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* DirectoryScreen */
